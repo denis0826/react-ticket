@@ -5,14 +5,13 @@ import { Card, CardImg, CardBody,
   CardSubtitle, Button } from 'reactstrap';
 
 
-
-const Ticket = (props, dispatch, id) => {
+const Ticket = ({ dispatch, id, title, subtitle }) => {
   return (
     <div>
       <Card>
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Card%20Title&w=318&h=180" alt="Card image cap" />
+        <CardImg top width="100%" src={`https://placeholdit.imgix.net/~text?txtsize=33&txt=${title}&w=318&h=180`} alt="Card image cap" />
         <CardBody>
-          <CardSubtitle>Card subtitle</CardSubtitle>
+          <CardSubtitle>{subtitle}</CardSubtitle>
           <Button color="success">Done</Button>
           <Button 
             color="danger" 

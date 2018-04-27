@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Input, InputGroup, Container, Row, Col } from 'reactstrap';
-import Ticket from './components/ticketItem';
+import TicketList from './components/ticketList';
 
 class App extends Component {
 
@@ -22,20 +22,7 @@ class App extends Component {
               </InputGroup>
             </Col>
           </Row>
-          <Row>
-            <Col xs="4">
-              <h4>In-Progress</h4>
-              <Ticket />
-            </Col>
-            <Col xs="4">
-              <h4>Done</h4>
-              <Ticket />
-            </Col>
-            <Col xs="4">
-              <h4>Close</h4>
-              <Ticket />
-            </Col>
-          </Row>
+          <TicketList />
         </Container>
       </div>
     );
