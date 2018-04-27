@@ -5,17 +5,19 @@ class TicketForm extends React.Component {
   state = {
     title : '',
     subtitle:'',
+    buttonTitle: 'Submit'
   };
   onTitleChange = (e) => {
     const title = e.target.value;
     this.setState(() => ({ title }));
   };
+
   onSubmit = (e) => {
     e.preventDefault();
 
     this.props.onSubmit({
-      title: this.state.title,
-    })
+      title: this.state.title
+    })   
 
     console.log('submitted');
   }
@@ -29,7 +31,7 @@ class TicketForm extends React.Component {
             value={this.state.title}
             onChange = {this.onTitleChange}
           />
-          <Button color="danger">Submit</Button>
+          <Button color="danger">{ this.state.buttonTitle }</Button>
         </InputGroup>
       </form>
     )

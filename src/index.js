@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 import { addTicket } from './actions/tickets';
+import AppRouter from './routers/AppRoutes';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
-import AppRouter from './routers/AppRoutes';
 
 const store = configureStore();
 
